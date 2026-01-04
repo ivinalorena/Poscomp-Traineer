@@ -1,12 +1,12 @@
 
 # POSCOMP-Unilab
 
-📘 **POSCOMP-Unilab** é uma interface desenvolvida para apoiar estudantes da área de Computação que desejam ingressar na pós-graduação.
+**POSCOMP-Unilab** é uma interface desenvolvida para apoiar estudantes da área de Computação que desejam ingressar na pós-graduação.
 O projeto tem como objetivo **facilitar o acesso às provas antigas do POSCOMP** de forma gratuita, organizada e acessível.
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 * Centralizar provas anteriores do POSCOMP em uma única interface.
 * Oferecer uma forma prática e gratuita para que os estudantes possam estudar.
@@ -14,13 +14,13 @@ O projeto tem como objetivo **facilitar o acesso às provas antigas do POSCOMP**
 
 ---
 
-## 🖥️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 * **Flask (Python)** – Backend da aplicação.
 * **HTML + CSS + JavaScript** – Estrutura e estilo da interface.
 ---
 
-## 🚀 Como executar o projeto
+## Como executar o projeto
 
 ### 1. Clonar o repositório
 
@@ -50,7 +50,7 @@ flask run
 ```
 
 
-## 📂 Estrutura do projeto
+## Estrutura do projeto
 
 ```
 poscomp-unilab/
@@ -63,7 +63,7 @@ poscomp-unilab/
 
 ---
 
-## 📌 Funcionalidades (previstas/implementadas)
+##  Funcionalidades (previstas/implementadas)
 
 * [x] Interface simples e responsiva.
 * [x] Acesso a provas anteriores do POSCOMP.
@@ -74,7 +74,7 @@ poscomp-unilab/
 
 ---
 
-## 🤝 Contribuição
+## Contribuição
 
 Contribuições são bem-vindas!
 Para contribuir:
@@ -87,14 +87,13 @@ Para contribuir:
 
 ---
 
-## 📜 Licença
+## Licença
 
 Este projeto é de uso **educacional e gratuito**.
 
 ---
 
-## 👨‍💻 Autores
+## Autores
 
 1. Ivina Lorena Oliveira Moura
-2. Thiago Queiroz
 
