@@ -151,7 +151,64 @@ body {
         }
         .feedback-correct { background-color: #dcfce7; color: #166534; display: block; }
         .feedback-incorrect { background-color: #fee2e2; color: #991b1b; display: block; }
+        /* Estilos para a seção de filtro por assunto */
+.assunto {
+    background: #f8f9fa;
+    padding: 1.5em;
+    border-radius: 15px;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
+.assunto h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+}
+
+.assunto-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-assunto {
+    padding: 12px 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.btn-assunto:hover {
+    background-color: #e2e6ea;
+    border-color: #999;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-assunto.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+/* Responsivo para botões */
+@media (max-width: 768px) {
+    .assunto-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-assunto {
+        width: 100%;
+        text-align: center;
+    }
+}
 /* --- RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS --- */
 @media screen and (max-width: 768px) {
     body {

@@ -11,7 +11,6 @@
     
 </head>
 <body>
-<!--SIDEBAR-->
      <div class="page-wrapper">
         <aside class="sidebar">
             <h3><a href="{{url_for('index')}}">Página Inicial</a></h3>
@@ -26,7 +25,16 @@
             </ul>
         </aside>
 <div class="main-container">
-    <h1 class="container-titulo">
+    <div class="assunto">
+        <h2>Resolver por assunto</h2>
+        <div class="assunto-buttons">
+            <button class="btn-assunto" data-subject="all">Todas as Questões</button>
+            <button class="btn-assunto" data-subject="matematica">Matemática</button>
+            <button class="btn-assunto" data-subject="fundamentos">Fundamentos da Computação</button>
+            <button class="btn-assunto" data-subject="tecnologia">Tecnologia de Computação</button>
+        </div>
+        </div>
+    <h1 class="container-titulo" data-subject="matematica">
         MATEMÁTICA
     </h1>
     <div class="questao-container">
@@ -44,8 +52,8 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
-        <p class="questao-titulo">
+    <div class="questao-container" data-subject="matematica">
+        <p class="questao-titulo" >
             QUESTÃO 02 – Calcule 'a' de maneira que o vetor (0, 2, a) seja combinação linear dos vetores (4, 0, 5) e (2, a, 3):
         </p>
         <ul class="opcoes" data-correct-answer="A">
@@ -58,7 +66,7 @@
         <div class="feedback-area"></div>
     </div>
     
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 03 – Assinale a alternativa que indica o produto escalar e o produto vetorial dos vetores $$\vec{u}=(3,-1,2)$$ e $$\vec{v}=(1,-2,-1)$$, respectivamente.
         </p>
@@ -72,7 +80,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 04 – Considere a equação do círculo $$x^2+y^2-2x+4y+1=0$$. A partir dessa equação, determine o raio do círculo.
         </p>
@@ -86,7 +94,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 05 – Considere a função $$F: \mathbb{R}^3 \to \mathbb{R}$$ dada por: $$F(x, y, z) = zx^2+e^{x}3-z^5\sin(y)-1$$. Assinale a alternativa que apresenta o gradiente de F no ponto (1, 0, 0).
         </p>
@@ -100,7 +108,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 06 – Encontre a área cotada na região do plano formada pelo eixo x, a curva $$y = e^x$$ e as retas x = 0 e x = 1.
         </p>
@@ -114,7 +122,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 07 – Resolva o sistema de equações lineares pelo método de Gauss, se a matriz do sistema é:
             $$ \left( \begin{array}{ccc|c} 1 & 2 & -3 & -2 \\ 3 & 0 & 1 & 0 \\ 2 & -1 & 2 & 3 \end{array} \right) $$
@@ -129,7 +137,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 08 – Assinale a alternativa que apresenta o ângulo formado entre a reta 2x-y-12=0 e a reta 3x+y+3=0.
         </p>
@@ -143,7 +151,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 09 – Se A e B são dois conjuntos finitos, realize a redução de $$E = \{A \cap (A \cup B)\} - B'$$.
         </p>
@@ -157,7 +165,7 @@
         <div class="feedback-area"></div>
     </div>
     
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 10 – Calcule o limite:
             $$ \lim_{x \to \infty} \frac{(2x+3)^3(3x-2)^2}{x^5+5} $$
@@ -172,7 +180,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 11 – Dada a afirmação:
         </p>
@@ -192,7 +200,7 @@
         <div class="feedback-area"></div>
     </div>
     
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 12 – Analise a proposição abaixo:
         </p>
@@ -212,7 +220,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 13 – Imagine que você esteja usando um aplicativo novo que ainda está em fase de testes. Por essa razão, uma pessoa só consegue instalar esse aplicativo se tiver recebido um convite de alguém que já era um usuário. Suponha que você tenha 10 convites para distribuir para 4 amigos. De quantas maneiras isso pode ser feito levando em consideração que os convites são todos indistinguíveis, que você pode distribuir mais de um convite para um mesmo amigo e que cada amigo deva receber pelo menos um convite?
         </p>
@@ -226,7 +234,7 @@
         <div class="feedback-area"></div>
     </div>
     
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 14 – Resolva a identidade $$ \overline{\overline{E} \cdot \overline{B}} $$, aplicando as leis da álgebra de Boole.
         </p>
@@ -240,7 +248,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 15 – Dado duas proposições lógicas q e p. <br> A proposição lógica $$\neg p \to q$$ é falsa se, e somente se, quando a proposição abaixo for verdadeira:
         </p>
@@ -254,7 +262,7 @@
         <div class="feedback-area"></div>
     </div>
 
-    <div class="questao-container">
+    <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 16 – Simplificando f=a'bc+abc+abc', utilizando o diagrama de Karnaugh, temos:
         </p>
@@ -267,7 +275,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 17 – Uma string temária é uma sequência ordenada finita formada por uma ou mais ocorrências dos dígitos 0, 1 e 2. O comprimento de uma string temária é a quantidade de dígitos que a compõem. Por exemplo, 20010 é uma string temária de comprimento 5. Uma string temária é chamada de interessante se tal string, da esquerda para direita, não possui dígito 0 ocorrendo em qualquer posição à direita de um dígito 1. Por exemplo, 0, 111, 22 e 020121 são strings temárias interessantes. No entanto, 1101, 211220 e 00012202 não são strings temárias interessantes. Quantas strings temárias interessantes de comprimento 8 existem?
         </p>
@@ -280,7 +288,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 18 – Em uma prova realizada a um grupo de alunos universitários foram obtidas as seguintes pontuações:
         </p>
@@ -326,7 +334,7 @@
             </table>
         </div>
 
-        <p class="questao-titulo">
+        <p class="questao-titulo" data-subject="matematica">
             A partir da tabela anterior, qual a porcentagem de alunos que tem pontuação entre 90 a 99?
         </p>
         <ul class="opcoes" data-correct-answer="B">
@@ -338,7 +346,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 19 – Quantos números inteiros positivos escritos na base decimal formados por exatamente 6 dígitos, que não começam com o dígito 0 (da esquerda para direita), palindromos e múltiplos de 4 existem? (Um número é chamado de palindrome se tal número é igual a ele mesmo quando escrito de trás para frente. Por exemplo, 1331 é considerado um número palindromo, pois 1331, escrito de trás para frente, é 1331. No entanto, 45 não é um número palindromo, pois 45, escrito de trás para frente, é 54).
         </p>
@@ -351,7 +359,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="matematica">
         <p class="questao-titulo">
             QUESTÃO 20 – O tempo t, em segundos, necessário para um processador resolver uma equação é uma variável aleatória com a seguinte distribuição de probabilidades:
         </p>
@@ -392,9 +400,9 @@
         <div class="feedback-area"></div>
     </div>
 
-    <h1 class="container-titulo">FUNDAMENTOS DA COMPUTAÇÃO</h1>
+    <h1 class="container-titulo" data-subject="fundamentos">FUNDAMENTOS DA COMPUTAÇÃO</h1>
 
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 21 – Os algoritmos de ordenação MergeSort, da árvore geradora mínima de Kruskal, e o algoritmo Floyd-Warshall que calcula o caminho mais curto entre todos os pares de vértices de um grafo orientado com peso são, respectivamente, exemplos de algoritmos:
         </p>
@@ -407,7 +415,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 22 – Considere as funções a seguir:
         </p>
@@ -431,7 +439,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 23 – Em relação à lista linear em alocação sequencial, é correto afirmar que:
         </p>
@@ -444,7 +452,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 24 – Qual é o método de ordenação representado por uma lista linear composta de elementos com chaves \( S_1, \ldots, S_n \), satisfazendo a seguinte propriedade:
         </p>
@@ -462,7 +470,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 25 – O tempo de execução de um algoritmo recursivo é analisado por:
         </p>
@@ -475,7 +483,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 26 – Qual é o método de compressão de texto cujo princípio é atribuir códigos mais curtos a símbolos com frequências altas, no qual um código único é atribuído a cada símbolo diferente do texto?
         </p>
@@ -488,7 +496,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 27 – De acordo com o diagrama de classes UML a seguir assinale a alternativa correta.
         </p>
@@ -506,7 +514,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 28 – Analise o código em Linguagem C (Compilador Ansi C) abaixo e assinale a alternativa que corresponde a saída na tela.
         </p>
@@ -528,7 +536,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 29 – Em relação à técnica de compressão corrida (Run-Length Encoding – RLE), analise as assertivas abaixo:
         </p>
@@ -551,7 +559,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 30 – Analise as seguintes assertivas sobre tipos de dados:
         </p>
@@ -574,7 +582,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 31 – De acordo com o diagrama de classes UML a seguir, assinale a alternativa que se relaciona diretamente com o conceito de polimorfismo da programação orientada a objetos.
         </p>
@@ -592,7 +600,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 32 – Um grafo não direcionado no qual todos os pares de vértices são adjacentes, isto é, possui arestas ligando todos os vértices entre si, é um grafo:
         </p>
@@ -605,7 +613,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 33 – Sobre os testes de condições em linguagem de programação, é correto afirmar que:
         </p>
@@ -618,7 +626,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 34 – Analise as assertivas a seguir que comparam os métodos de alocação de espaço encadeado e indexado, usados na implementação de diretórios de arquivos:
         </p>
@@ -641,7 +649,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 35 – Considere que um projetista deseja indexar um arquivo que contém registros com diferentes atributos numéricos. Ele deseja poder fazer buscas eficientes sobre registros baseado em valores exatos (e.g. 10), bem como por intervalos de valores (e.g. entre 10 e 20). Qual estrutura de indexação seria a mais apropriada?
         </p>
@@ -654,7 +662,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 36 – Qual é a implementação no qual um grafo \( G = (V, A) \) contendo n vértices é uma matriz \( n \times n \) de bits, em que \( A[i,j] \) é 1 (ou verdadeiro, no caso de booleanos) se e somente se existe um arco do vértice i para o vértice j.
         </p>
@@ -667,7 +675,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 37 – Qual é o algoritmo de busca em grafos no qual a busca inicia-se a partir de um nodo raiz e percorre cada caminho de forma a ir o mais longe possível antes de passar para outro caminho?
         </p>
@@ -680,7 +688,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 38 – Assinale V, se verdadeiro, ou F, se falso, em relação a uma estrutura de controle que permite que uma ação será repetida enquanto uma condição for verdadeira.
         </p>
@@ -704,7 +712,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 39 – Dado a gramática regular (G), determine qual é a expressão regular (r), tal que L(r) = L(G):
         </p>
@@ -723,7 +731,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container" style="border: 2px dashed #ff0000;">
+        <div class="questao-container" style="border: 2px dashed #ff0000;" data-subject="fundamentos">  
         <p class="questao-titulo" style="color: #ff0000;">
             QUESTÃO 40 – Qual é a linguagem aceita pelo Autômato Finito Determinístico a seguir? (QUESTÃO ANULADA)
         </p>
@@ -743,7 +751,7 @@
         </div>
         </div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 41 – Sobre o lema do bombeamento para as linguagens regulares, analise as assertivas a seguir:
         </p>
@@ -767,7 +775,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 42 – Uma expressão lógica do tipo soma de produtos está na forma canônica se cada um de seus mintermos (termos produto) contêm todas as variáveis, seja na forma direta ou na forma complementada. Assinale a alternativa que contém a expressão lógica, representada pela soma dos seus mintermos, cuja simplificação pela álgebra booleana fornece a expressão:
         </p>
@@ -785,7 +793,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 43 – Seja o contador síncrono da figura abaixo. Considerando que os valores binários das saídas do contador sejam Q2 = 0; Q1 = 1 e Q0 = 0, assinale a alternativa que contém o valor binário das saídas Q2, Q1 e Q0 após o próximo pulso do sinal de clock.
         </p>
@@ -802,7 +810,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 44 – Considere uma memória cache com um tamanho de linha de 16 bytes e uma memória principal que requer 20 ns para transferir uma palavra de 8 bytes, para qualquer linha que seja escrita pelo menos uma vez, antes de ser retirada da cache. Qual é o número médio de vezes que a linha precisa ser escrita antes de ser retirada para que uma cache write-back seja mais eficiente do que uma cache write-through?
         </p>
@@ -815,7 +823,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 45 – Sistemas operacionais que utilizam o método de memória virtual usualmente reservam um espaço em memória secundária (ex. disco) denominado de "área de troca", espaço este utilizado para realizar:
         </p>
@@ -828,7 +836,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 46 – O programa (em linguagem C) abaixo executa em um sistema operacional da família UNIX. Considere que todas as rotinas invocadas no programa executam sem erro. Assinale a alternativa que indica o resultado impresso na tela pelo programa.
         </p>
@@ -854,7 +862,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 47 – Um microcontrolador hipotético contém 3 tipos de memória: uma memória Flash, para armazenamento dos programas, uma memória RAM, para manipulação das variáveis de programa e uma memória EEPROM, para armazenamento de programas de longa permanência. O endereço para acessar uma posição da memória Flash é um número binário de 16 bits e, em cada endereço (posição de memória), são armazenados 16 bits. Com essas informações, analise as assertivas a seguir:
         </p>
@@ -877,7 +885,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 48 – Um barramento do sistema consiste, normalmente, em cerca de 50 a centenas de linhas separadas. Cada linha recebe um significado ou função em particular. Embora existam muitos projetos de barramento diferentes, em qualquer barramento as linhas podem ser classificadas em grupos funcionais. Assinale a alternativa INCORRETA sobre barramento.
         </p>
@@ -890,7 +898,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container"data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 49 – O paralelismo em nível de instruções existe quando as instruções de uma sequência são independentes e, assim, podem ser executadas em paralelo por sobreposição. Como um exemplo do conceito de paralelismo, considere dois pedaços de código (A e B) a seguir (JOUPPI, 1989):
         </p>
@@ -928,7 +936,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="fundamentos">
         <p class="questao-titulo">
             QUESTÃO 50 – Ao processar um arquivo mapeado em memória, a leitura de dados do arquivo em disco para a memória principal ocorre como resultado de uma:
         </p>
@@ -942,9 +950,9 @@
         <div class="feedback-area"></div>
     </div>
 
-    <h1 class="container-titulo">TECNOLOGIA DE COMPUTAÇÃO</h1>
+    <h1 class="container-titulo" data-subject="tecnologia">TECNOLOGIA DE COMPUTAÇÃO</h1>
 
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 51 – No escalonamento transações de banco de dados, dois conceitos são pertinentes ao controle de concorrência: serialização e recuperação. O primeiro refere-se a escalonamentos com transações executadas simultaneamente sem interferir umas nas outras, tal que produza um estado de banco de dados que pode ser gerado por uma execução serial das mesmas transações. O segundo busca manter a consistência do banco de dados, quando pelo menos uma das transações do escalonamento falha. Quanto à serialização, escalonamentos são classificados como não serializáveis ou serializáveis. Quanto à recuperação, escalonamentos são classificados como não recuperáveis ou recuperáveis. Nesse sentido, analise as assertivas abaixo sobre o controle de concorrência para as transações T1, T2, ..., Tn (n >2):
         </p>
@@ -968,7 +976,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 52 – Suponha um problema de classificação binária (classes A e B), cujo classificador escolhido considera um conjunto de pontos em um plano bidimensional, onde cada ponto se refere a uma amostra conhecida. Há várias linhas no plano, tal que todos os pontos da classe A fiquem para um lado e todos os pontos da classe B fiquem para o outro. Dentre tais linhas, o classificador escolhe a linha cuja distância do ponto mais próximo em qualquer classe (em relação aos pontos no conjunto de dados de treinamento) é máxima. Essa linha (chamada de linha de margem máxima) é então usada para classificar outros pontos, dependendo de qual lado da linha eles estão. O mencionado classificador é denominado:
         </p>
@@ -981,8 +989,8 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-    <!----FALTA CONTINUAR AS QUESTÕES -->
-        <div class="questao-container">
+
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 53 – Em relação à manutenção de software, analise as assertivas abaixo:
         </p>
@@ -1005,7 +1013,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 54 – Em relação às camadas e suas funções, analise as assertivas abaixo, assinalando V, se verdadeiras, ou F, se falsas.
         </p>
@@ -1017,7 +1025,7 @@
             ( ) A camada de transporte é fundamental para esconder detalhes dos meios físicos de transmissão da camada de sessão.
         </div>
 
-        <p class="questao-titulo">
+        <p class="questao-titulo" >
             A ordem correta de preenchimento dos parênteses, de cima para baixo, é:
         </p>
         <ul class="opcoes" data-correct-answer="B">
@@ -1029,7 +1037,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 55 – Considere que os produtos de uma loja são modelados pelo esquema de relação PROD(Codigo, Descricao, Preco), em que Codigo é a chave primária da relação. O banco de dados possui vários produtos, onde se observa pelo menos n (n>10) preços distintos. A consulta a seguir, que está escrita conforme o formalismo da álgebra relacional, usa as operações projeção, seleção, produto cartesiano e renomeação, as quais são representadas pelos símbolos π, σ, × e ρ, respectivamente.
         </p>
@@ -1050,7 +1058,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 56 – Requisitos não funcionais envolvem requisitos de produto, organizacionais e externos (SOMMERVILLE, 2011). Os requisitos de produto especificam ou restringem o funcionamento do software. Os organizacionais atendem a políticas ou procedimentos relativos aos clientes e/ou organizações. Já os requisitos externos são derivados de fatores externos ao sistema e ao processo de desenvolvimento. Considere as subclasses de requisitos não funcionais abaixo, e os respectivos exemplos.
         </p>
@@ -1073,7 +1081,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 57 – Considerando as técnicas para aplicação de texturas, analise as seguintes assertivas:
         </p>
@@ -1096,7 +1104,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 58 – Qual é o modelo de tonalização que realiza a interpolação dos vetores normais em uma superfície, produzindo um resultado mais realista dos pontos de brilho (highlights) da superfície?
         </p>
@@ -1109,7 +1117,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 59 – Sobre a restauração de imagens, analise as assertivas abaixo:
         </p>
@@ -1134,7 +1142,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 60 – Uma empresa dividiu a sua rede em duas sub-redes, apresentadas na tabela abaixo.
         </p>
@@ -1174,7 +1182,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 61 – A codificação _____ tem como estratégia realizar a decomposição de uma imagem monocromática ou colorida em várias imagens binárias. Cada uma dessas imagens binárias é comprimida utilizando métodos de compressão binária.
         </p>
@@ -1187,7 +1195,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-        <div class="questao-container">
+        <div class="questao-container" data-subject="tecnologia">
         <p class="questao-titulo">
             QUESTÃO 62 – Qual é o conceito no qual o sistema operacional permite que o computador execute diversos programas – ou processos – ao mesmo tempo e, se houver apenas uma unidade central de processamento (CPU), o sistema operacional executa alguns comandos de um processo, depois suspende esse processo e executa alguns comandos do próximo processo, e assim por diante?
         </p>
@@ -1200,7 +1208,7 @@
         </ul>
         <div class="feedback-area"></div>
     </div>
-    <div class="questao-container">
+    <div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 63 – Dada a gramática G = (V, Σ, P, S ), onde P = { S ::= (S) S , S ::=ε }, encontre o reconhecedor para a linguagem gerada por G.
     </p>
@@ -1213,7 +1221,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 64 – Qual é o tipo falha no qual uma transação atualiza um item de dado e, em seguida, falha, e o item de dados é acessado por uma outra transação antes que a transação que falhou retorne ao seu valor original?
     </p>
@@ -1226,7 +1234,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 65 – Em relação ao protocolo UDP, podemos afirmar que ele:
     </p>
@@ -1239,7 +1247,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 66 – No contexto de algoritmos genéticos, assinale a alternativa correta.
     </p>
@@ -1252,7 +1260,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 67 – Uma transação entra em um estado de falha quando o sistema determina que ela já não pode prosseguir a sua execução normal. A transação deve ser desfeita e, entra, então, em estado abortado. Nesse momento, o sistema tem duas opções:
     </p>
@@ -1265,7 +1273,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 68 – Encontre a maior linguagem para o alfabeto {a,b} utilizando apenas uma expressão regular abaixo:
     </p>
@@ -1278,7 +1286,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 69 – Considerando o estudo em Inteligência Artificial, assinale a alternativa que apresenta, corretamente, os algoritmos de classificação no aprendizado supervisionado.
     </p>
@@ -1291,7 +1299,7 @@
     </ul>
     <div class="feedback-area"></div>
 </div>
-<div class="questao-container">
+<div class="questao-container" data-subject="tecnologia">
     <p class="questao-titulo">
         QUESTÃO 70 – Analise as seguintes assertivas sobre gestão da qualidade em desenvolvimento de software:
     </p>
@@ -1318,8 +1326,50 @@
 
 </div>
 
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    // Filtro por assunto
+    const assuntoButtons = document.querySelectorAll('.btn-assunto');
+    const questoes = document.querySelectorAll('.questao-container');
+    const titulos = document.querySelectorAll('.container-titulo');
+
+    assuntoButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedSubject = button.dataset.subject;
+            
+            // Remove active de todos os botões
+            assuntoButtons.forEach(btn => btn.classList.remove('active'));
+            // Adiciona active no botão clicado
+            button.classList.add('active');
+
+            // Filtra questões e títulos
+            if (selectedSubject === 'all') {
+                questoes.forEach(q => q.style.display = 'block');
+                titulos.forEach(t => t.style.display = 'block');
+            } else {
+                questoes.forEach(q => {
+                    if (q.dataset.subject === selectedSubject) {
+                        q.style.display = 'block';
+                    } else {
+                        q.style.display = 'none';
+                    }
+                });
+                
+                titulos.forEach(t => {
+                    if (t.dataset.subject === selectedSubject) {
+                        t.style.display = 'block';
+                    } else {
+                        t.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Scroll para o topo após filtrar
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+
     // Encontra TODAS as questões na página
     const todasAsQuestoes = document.querySelectorAll('.questao-container');
 
