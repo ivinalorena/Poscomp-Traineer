@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <!--sidebar-->
 <div class="page-wrapper">
         <aside class="sidebar">
             <h3><a href="{{url_for('index')}}">Página Inicial</a></h3>
@@ -19,13 +18,22 @@
                 <li><a href="{{url_for('POSCOMP2024')}}">2024</a></li>
                 <li><a href="{{url_for('POSCOMP2023')}}">2023</a></li>
                 <li><a href="{{url_for('POSCOMP2022')}}">2022</a></li>
-                <li><a href="{{url_for('POSCOMP2021')}}">2021</a></li>
+                <li><a href="{{url_for('POSCOMP2019')}}">2019</a></li>
                 <li><a href="{{url_for('POSCOMP2020')}}">2020</a></li>
                 <li><a href="{{url_for('sobre')}}">Sobre</a></li>
             </ul>
         </aside>
 
 <div class="main-container">
+        <div class="assunto">
+        <h2>Resolver por assunto</h2>
+        <div class="assunto-buttons">
+            <button class="btn-assunto" data-subject="all">Todas as Questões</button>
+            <button class="btn-assunto" data-subject="matematica">Matemática</button>
+            <button class="btn-assunto" data-subject="fundamentos">Fundamentos da Computação</button>
+            <button class="btn-assunto" data-subject="tecnologia">Tecnologia de Computação</button>
+        </div>
+    </div>
     <div class="content-container">
         <h1>POSCOMP 2020 - Em desenvolvimento</h1>
     </div>

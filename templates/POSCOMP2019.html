@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSCOMP 2019</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='stylePOSCOMP2019.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='icon.png')}}">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <!--sidebar-->
+<div class="page-wrapper">
+        <aside class="sidebar">
+            <h3><a href="{{url_for('index')}}">Página Inicial</a></h3>
+            <h3>Ano da Prova</h3>
+            <ul>
+                <li><a href="{{url_for('POSCOMP2024')}}">2024</a></li>
+                <li><a href="{{url_for('POSCOMP2023')}}">2023</a></li>
+                <li><a href="{{url_for('POSCOMP2022')}}">2022</a></li>
+                <li><a href="{{url_for('POSCOMP2019')}}">2019</a></li>
+                <li><a href="{{url_for('POSCOMP2020')}}">2020</a></li>
+                <li><a href="{{url_for('sobre')}}">Sobre</a></li>
+            </ul>
+        </aside>
+
+<div class="main-container">
+        <div class="assunto">
+        <h2>Resolver por assunto</h2>
+        <div class="assunto-buttons">
+            <button class="btn-assunto" data-subject="all">Todas as Questões</button>
+            <button class="btn-assunto" data-subject="matematica">Matemática</button>
+            <button class="btn-assunto" data-subject="fundamentos">Fundamentos da Computação</button>
+            <button class="btn-assunto" data-subject="tecnologia">Tecnologia de Computação</button>
+        </div>
+    </div>
+    <div class="content-container">
+        <h1>POSCOMP 2021 - Em desenvolvimento</h1>
+    </div>
+<!--     <div class="image-area">
+        <img src="{{url_for('static', filename='Server.gif')}}" alt="Imagem de um servidor" class="image-area">
+
+    </div> -->
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 01 – Seja uma matriz quadrada de terceira ordem \( A = \begin{pmatrix} 2 & 3 & 5 \\ 7 & 11 & 13 \\ 17 & 19 & 23 \end{pmatrix} \), calcule o determinante:
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Det \( A = -78 \) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Det \( A = -84 \) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Det \( A = 84 \) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Det \( A = 78 \) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Det \( A = -87 \) </li>
+    </ul>
+    <div class="feedback-area"></div>   
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 02 – Seja \( E = \mathbb{R}^3 \). Os vetores \(\{(1, 2, 3), (2, 5, 8), (1, 3, 7)\}\) são independentes?
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Não. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Sim. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Não pode ser calculado. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Sim, se fosse um espaço de \(\mathbb{R}^2\). </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Seriam independentes se o 1º vetor fosse \((1, 5, 7)\). </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 03 – Encontre a equação da reta \( s \), que passa pelo ponto \( A(3, 4) \) e que é perpendicular à reta \( r: x + y - 5 = 0 \).
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \( r: 5x - 2y + 2 = 0 \) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \( r: x + y + 4 = 0 \) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \( r: 2x + y = 0 \) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \( r: x - y + 1 = 0 \) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \( r: x - 3y + 2 = 0 \) </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 04 – Encontre as coordenadas do centro (C) da circunferência de equação  
+        t: \( x^2 + y^2 - 3x + 5y - 14 = 0 \).
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \( C \left( \frac{1}{2}, \frac{1}{2} \right) \) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \( C \left( -\frac{1}{2}, \frac{3}{2} \right) \) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \( C \left( \frac{3}{2}, \frac{1}{2} \right) \) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \( C \left( \frac{5}{2}, \frac{5}{2} \right) \) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \( C \left( \frac{3}{2}, -\frac{5}{2} \right) \) </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 05 – Calcule o \[ \lim_{x \to 2} \frac{x^3 - 8}{6x^2 - 3x^3} \].
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> -2 </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> ∞ </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 0 </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 1 </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> -1 </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 05 – Calcule o \[ \lim_{x \to 2} \frac{x^3 - 8}{6x^2 - 3x^3} \].
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> -2 </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> ∞ </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 0 </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 1 </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> -1 </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica"> 
+    <p class="questao-titulo">
+        QUESTÃO 06 – Para quais valores de a e b, f(x) é contínua em \( x = 1 \) e \( x = 4 \).
+
+        \[f(x) =
+        \begin{cases} 
+        x & se \, x \leq 1 \\
+        ax + b & se \, 1 < x < 4 \\
+        -2x & se \, 4 \leq x 
+        \end{cases}\]
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \( a = -9 \, e \, b = -3 \) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \( a = -3 \, e \, b = 4 \) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \( a = 1 \, e \, b = 1 \) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \( a = -1 \, e \, b = 2 \) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \( a = 2 \, e \, b = 3 \) </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 07 – Determine a matriz inversa de \( A = \begin{pmatrix} 1 & 2 & 2 \\ 2 & 1 & 2 \\ 2 & 2 & 1 \end{pmatrix} \).
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \( A^{-1} = \frac{1}{5} \begin{pmatrix} 1 & 7 & -1 \\ 7 & 1 & 1 \\ 1 & 3 & 1 \end{pmatrix} \) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \( A^{-1} = \frac{1}{5} \begin{pmatrix} 1 & 0 & -2 \\ 5 & 1 & 0 \\ 0 & 1 & 1 \end{pmatrix} \) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \( A^{-1} = \frac{5}{1} \begin{pmatrix} 0 & -1 & 1 \\ -7 & 3 & 4 \\ 7 & 1 & -1 \end{pmatrix} \) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \( A^{-1} = \frac{1}{5} \begin{pmatrix} -3 & 2 & 2 \\ 2 & -3 & 2 \\ 2 & 2 & -3 \end{pmatrix} \) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \( A^{-1} = \frac{1}{3} \begin{pmatrix} 1 & 3 & -3 \\ 5 & 3 & 1 \\ 1 & 3 & -3 \end{pmatrix} \) </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 08 – Encontre as coordenadas retangulares do ponto (P), cujas coordenadas polares são (3, 120°, 120°, 135°).
+
+        \[x = r * \cos \alpha\]
+        \[y = r * \cos \beta\]
+        \[z = r * \cos \gamma\]
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \( P \left( \frac{-3}{2}, \frac{-3}{2}, \frac{-3\sqrt{2}}{2} \right) \) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \( P \left( \frac{1}{2}, \frac{1}{2}, \frac{\sqrt{2}}{2} \right) \) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \( P \left( \frac{-1}{2}, \frac{-1}{2}, \sqrt{2} \right) \) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \( P \left( \frac{3}{2}, \frac{3}{2}, \frac{1}{2} \right) \) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \( P \left( \frac{-1}{2}, \frac{-3}{2}, \frac{\sqrt{2}}{2} \right) \) </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 09 – Simplifique, com a ajuda dos Mapas de Karnaugh, a função cuja expressão em termos canônicos é: \( f(x,y,z) = \sum m(2,3,4,5,6,7) \)
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \( f(X,Y,Z) = X + Y \) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \( f(X,Y,Z) = X + Y + Z \) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \( f(X,Y,Z) = \overline{X} + Y \) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \( f(X,Y,Z) = XY + Y \) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \( f(X,Y,Z) = X + Y + \overline{Z} \) </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+        <p class="questao-titulo">
+            QUESTÃO 10 – A função \( g(x) = x^3 - 6x^2 + 9x - 2 \) tem um máximo local estrito no ponto:
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \( A(0, -2) \) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \( A(3, -2) \) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \( A(1, 2) \) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \( A(2, 0) \) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \( A(4, 2) \) </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 11 – Considere as premissas a seguir verdadeiras:
+
+        Premissa 1: Se Daenerys come churrasco ou João anda a cavalo, então Cersei assiste a um filme.  
+        Premissa 2: Hoje, Cersei não assistiu a um filme.  
+        Premissa 3: Se hoje é domingo, então Daenerys come churrasco e Jaime treina esgrima.  
+        Premissa 4: Hoje, Jaime foi treinar esgrima.
+
+        É correto concluir que:
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Hoje é domingo e Daenerys comeu churrasco. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Hoje não é domingo e Daenerys comeu churrasco. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Hoje não é domingo e João não andou a cavalo. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Daenerys comeu churrasco ou João andou a cavalo. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Hoje é domingo e João andou a cavalo. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 12 – Considere a seguinte proposição:
+
+        Em todos os cursos de Computação, existe, pelo menos, uma disciplina de Lógica.
+
+        A negação da proposição acima é logicamente equivalente à proposição:
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Em nenhum curso de Computação, há alguma disciplina de Lógica. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Há, pelo menos, um curso de Computação no qual não há disciplina de Lógica. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Em cada um dos cursos de Computação, não há disciplina de Lógica. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Não há curso de Computação no qual tenha disciplina de Lógica. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Há um curso de Computação no qual há, no máximo, uma disciplina de Lógica. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 13 – Dez pessoas estão participando de um campeonato de xadrez. Na primeira rodada do campeonato, haverá cinco partidas. De quantas maneiras distintas é possível organizar a primeira rodada do campeonato, considerando que não há distinção entre a partida “competidor A versus competidor B” e a partida “competidor B versus competidor A”?
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 45. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 252. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 945. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 3.840. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 113.400. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+        <p class="questao-titulo">
+            QUESTÃO 14 – Resolva a identidade \(\overline{C} \cdot (\overline{D} + \overline{E})\) , aplicando, se necessário, as leis de álgebra de Boole.
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \(\overline{C} + (D \cdot E)\) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \(\overline{C} + (C + E)\) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \(C + (\overline{C} \cdot \overline{E})\) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \(\overline{C} \cdot (D \cdot E)\) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \((C + D) \cdot (C + E)\) </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 15 – A expressão lógica ~q → ~p é equivalente a:
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> ~p ∧ ~q </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> ~p ∨ q </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> ~p → q </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> p → ~q </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> q → p </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 16 – O número hexadecimal BEEF em base 2 é:
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 1010 1111 1111 1110 </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 1011 1110 1110 1111 </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 0010 0011 0011 0100 </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 1000 0101 0101 0100 </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 1001 1100 1100 1101 </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 17 – Uma pessoa deseja fazer uma compra na Internet e, para isso, precisa se cadastrar em um site. A senha de cadastro deve ser formada por exatamente 9 caracteres, e somente os caracteres $, @ e # podem ser usados. Quantas senhas diferentes, contendo pelo menos uma ocorrência de cada caractere, existem?
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 729. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 4.374. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 18.150. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 61.236. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 367.416. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 18 – Encontre a média (µ) e o desvio padrão (σ) da distribuição:
+
+        | Xi | 1    | 3    | 5    | 7    |
+        | Pi   | 0,3  | 0,1  | 0,4  | 0,2  |
+
+        \[\mu = E(X) = \sum x_i p_i\]
+
+        \[E(X^2) = \sum x_i^2 p_i\]
+
+        \[\sigma^2 = E(X^2) - \mu^2\]
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> µ = 4,0; σ = 2,24 </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> µ = 4,0; σ = 5,00 </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> µ = 5,0; σ = 25,0 </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> µ = 3,0; σ = 4,0 </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> µ = 4,0; σ = 21,0 </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+    <p class="questao-titulo">
+        QUESTÃO 19 – De quantas maneiras diferentes é possível formar uma equipe de ginástica olímpica com precisamente 3 ginastas mulheres e 4 ginastas homens, escolhidos a partir de uma delegação com 15 pessoas, das quais 8 são homens e 7 são mulheres?
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 91. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 105. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 1.960. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 2.450. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 5.460. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="matematica">
+        <p class="questao-titulo">
+            QUESTÃO 20 – Um avião tem três computadores idênticos, e utiliza-se apenas um para operá-lo, os dois restantes são de reposição que podem se ativar caso o sistema principal falhe. Durante uma hora de operação, a probabilidade de falha do computador principal (ou de qualquer sistema de reposição ativado) é de 0,0005. Supondo que cada hora representa um teste independente, qual é o tempo médio para que ocorram falhas nos três computadores?
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 200 horas. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 1.000 horas. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 2.000 horas. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 3.000 horas. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 6.000 horas. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <h1 class="container-titulo" data-subject="fundamentos">
+    FUNDAMENTOS DA COMPUTAÇÃO
+    </h1> 
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 21 – Considere os seguintes algoritmos recursivos que resolvem o mesmo problema em uma entrada de tamanho n:
+
+        **Algoritmo 1:** Divide o problema em 3 partes de tamanho \( n/4 \) cada e gasta um tempo adicional \( O(1) \) por chamada.
+
+        **Algoritmo 2:** Divide o problema em 3 partes de tamanho \( n/2 \) cada e gasta um tempo adicional \( O(n^2) \) por chamada.
+
+        **Algoritmo 3:** Divide o problema em 3 partes de tamanho \( n/3 \) cada e gasta um tempo adicional de \( O(n) \) por chamada.
+
+        A complexidade dos algoritmos 1, 2 e 3 é, respectivamente:
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \(\Theta \left( n^{log_43} \right), \Theta \left( n^2 \right), \Theta \left( n \log n \right)\) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \(\Theta \left( \frac{n}{4} \right), \Theta \left( \frac{n}{2} \right), \Theta \left( \frac{n}{3} \right)\) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \(\Theta \left( 1 \right), \Theta \left( n^2 \right), \Theta \left( n \right)\) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \(\Theta \left( n^4 \right), \Theta \left( n^2 \right), \Theta \left( n^3 \right)\) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \(\Theta \left( n^{log_43} \right), \Theta \left( n^{log_23} \right), \Theta \left( n^{log_33} \right)\) </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 22 – Considere as seguintes funções:
+
+        \[f(n) = 2^n\]
+
+        \[g(n) = n!\]
+
+        \[h(n) = n^{logn}\]
+
+        Assinale a alternativa correta a respeito do comportamento assintótico de \( f(n), g(n) \in h(n) \).
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \( f(n) = O(g(n)); g(n) = O(h(n)) \). </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \( f(n) = \Omega(g(n)); g(n) = O(h(n)) \). </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \( g(n) = O(f(n)); h(n) = O(f(n)) \). </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \( h(n) = O(f(n)); g(n) = \Omega(f(n)) \). </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Nenhuma das anteriores. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 23 – Sobre árvores, é correto afirmar que:
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Um nodo é interno se não tiver filhos e é externo se tiver um ou mais filhos. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> O ancestral de um nodo pode ser tanto seu ancestral direto como um ancestral do pai do nodo. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Uma árvore é balanceada se existe uma ordem linear definida para cada nodo, isto é, podemos identificar o filho de um nodo como sendo o primeiro, segundo e assim por diante. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Uma árvore binária é dita própria se todo nodo interno tiver um ou zero filhos. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Se o nodo v é pai do nodo u, então dizemos que v é filho de u. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 24 – Um procedimento recursivo é aquele que contém em sua descrição:
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Uma prova de indução matemática. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Duas ou mais chamadas a procedimentos externos. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Uma ou mais chamadas a si mesmo. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Somente chamadas externas. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Uma ou mais chamadas a procedimentos internos. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 25 – Considere a seguinte função em C:
+        <pre>void funcao(int n){
+    int i,j;
+    for (i=1; i &lt;= n; i++)
+        for(j=1; j&lt;log(i); j++)
+            printf("%d",i+j);
+}</pre>
+        A complexidade dessa função é:
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \(\theta(n)\) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \(\theta(n \log n)\) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \(\theta(\log n)\) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \(\theta(n^2)\) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \(\theta(n^2 \log n)\) </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+<div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 26 – Sobre listas, analise as assertivas abaixo:
+
+        I. Objetos podem ser inseridos em uma pilha a qualquer momento, mas apenas o que foi inserido mais recentemente (isto é, o último) pode ser removido a qualquer momento.
+        II. Em uma fila, os elementos podem ser inseridos a qualquer momento, mas apenas o elemento que está a mais tempo na fila pode ser removido.
+        III. Em uma fila, os elementos são inseridos e removidos de acordo com o princípio “o último que entra é o primeiro que sai”.
+
+        Quais estão corretas?
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas II. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas III. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas I e II. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II e III. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+
+
+</div>
+</body>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Filtro por assunto
+    const assuntoButtons = document.querySelectorAll('.btn-assunto');
+    const questoes = document.querySelectorAll('.questao-container');
+    const titulos = document.querySelectorAll('.container-titulo');
+
+    assuntoButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedSubject = button.dataset.subject;
+            
+            // Remove active de todos os botões
+            assuntoButtons.forEach(btn => btn.classList.remove('active'));
+            // Adiciona active no botão clicado
+            button.classList.add('active');
+
+            // Filtra questões e títulos
+            if (selectedSubject === 'all') {
+                questoes.forEach(q => q.style.display = 'block');
+                titulos.forEach(t => t.style.display = 'block');
+            } else {
+                questoes.forEach(q => {
+                    if (q.dataset.subject === selectedSubject) {
+                        q.style.display = 'block';
+                    } else {
+                        q.style.display = 'none';
+                    }
+                });
+                
+                titulos.forEach(t => {
+                    if (t.dataset.subject === selectedSubject) {
+                        t.style.display = 'block';
+                    } else {
+                        t.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Scroll para o topo após filtrar
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+
+    // Encontra TODAS as questões na página
+    const todasAsQuestoes = document.querySelectorAll('.questao-container');
+
+    // Aplica a lógica para CADA UMA delas independentemente
+    todasAsQuestoes.forEach(questao => {
+        const optionsList = questao.querySelector('.opcoes');
+        const options = questao.querySelectorAll('.opcoes li');
+        const feedbackEl = questao.querySelector('.feedback-area');
+        
+        // Pega a resposta correta direto do atributo do HTML
+        const CORRECT_ANSWER = optionsList.dataset.correctAnswer;
+        
+        let respostaEnviada = false; 
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                if (respostaEnviada) {
+                    return;
+                }
+                
+                respostaEnviada = true; 
+                optionsList.classList.add('respondido');
+
+                const chosenOption = option.dataset.option;
+
+                if (chosenOption === CORRECT_ANSWER) {
+                    option.classList.add('correct');
+                    feedbackEl.textContent = 'Parabéns! Resposta Correta!';
+                    feedbackEl.classList.add('feedback-correct');
+                    if(typeof confetti === 'function') {
+                        confetti({ particleCount: 150, spread: 90, origin: { y: 0.6 } });
+                    }
+                } else {
+                    option.classList.add('incorrect');
+                    feedbackEl.textContent = 'Ops! A resposta correta era a ' + CORRECT_ANSWER + '.';
+                    feedbackEl.classList.add('feedback-incorrect');
+                }
+            });
+        });
+    });
+});
+</script>
+</html>

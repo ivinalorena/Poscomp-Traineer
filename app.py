@@ -18,9 +18,9 @@ def POSCOMP2023():
 def POSCOMP2024():
     return render_template('POSCOMP2024.html')
 
-@app.route('/POSCOMP2021')
-def POSCOMP2021():
-    return render_template('POSCOMP2021.html')
+@app.route('/POSCOMP2019')
+def POSCOMP2019():
+    return render_template('POSCOMP2019.html')
 
 @app.route('/POSCOMP2020')
 def POSCOMP2020():

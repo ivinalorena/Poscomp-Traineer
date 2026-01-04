@@ -1,0 +1,375 @@
+body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2em;
+            padding-bottom: 0;
+            font-size: 18px;
+            background-color: #ffffff;
+        }
+        .footer{
+            width: 100%;
+            background-color: #ffffff;
+            text-align: center;
+            border-top: solid 1px  #3cffb4;
+            margin: 0;
+            font-size: smaller;
+            font-family: Arial, sans-serif;
+            font-style: initial;
+            color: #58595a;
+        }
+        .page-wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+        /* --- Menu Lateral --- */
+        .sidebar {
+            width: 240px; /* Largura do menu lateral */
+            height: 20%;
+            flex-shrink: 0; /* Impede que o menu encolha */
+            background: #f8f9fa; /* Cor de fundo do menu lateral */;
+            border-right: 1px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 25px;
+            box-sizing: border-box; /* Garante que o padding não aumente a largura */
+        }
+
+        .sidebar h3 {
+            font-size: 1.2em;
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #e2e6ea;
+        }
+
+        /* Estilização do container que envolve o título */
+        .container-titulo {
+            /* O gradiente de cores, indo da esquerda (to right) para a direita. */
+            /* Você pode ajustar as cores para combinar exatamente com a imagem. */
+            background: #333;/*linear-gradient(to right, #00bcd4, #8bc34a);*/
+            background-color: #333;
+            padding: 1em;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1em;
+            /* Centraliza o texto dentro do container */
+            text-align: center;
+
+        }
+         /* Estilo para o link */
+        a {
+            color: #58595a;
+            text-decoration: none;
+        }
+        
+        h3{
+            color: #58595a;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        a:hover {
+            text-decoration:overline;
+        }
+
+         /* Estilização do elemento h1 */
+        .container-titulo{
+            /* Cor da fonte */
+            color: white;
+            /* Define a família da fonte. Arial e sans-serif são opções seguras e comuns. */
+            font-family: Arial, Helvetica, sans-serif;
+            /* Remove a margem padrão do h1 para um melhor ajuste no container */
+            margin: 1em;
+            /* Coloca o texto em negrito */
+            font-weight: bold;
+            /* Ajuste o tamanho da fonte como desejar */
+            font-size: 20px;
+        }
+        .main-container {
+            max-width: 700px;
+            margin: auto;
+        }
+        .questao-container {
+                background-color: white;
+                padding: 2em;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                margin-bottom: 2em; /* Espaçamento entre as questões */
+        }
+        .questao27{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 1em;
+        }
+        
+        .questao-titulo { font-weight: bold; font-size: 1.2em; }
+        .afirmacao-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #ced4da;
+            padding: 15px;
+            margin: 1.5em 0;
+            font-style: italic;
+            text-align: center;
+        }
+        .opcoes { list-style-type: none; padding: 0; }
+        .opcoes li {
+            margin-bottom: 1.5em; display: flex; align-items: center;
+            padding: 10px; border-radius: 8px; border: 2px solid #ddd;
+            transition: all 0.2s ease-in-out;
+        }
+        .opcoes:not(.respondido) li { cursor: pointer; }
+        .opcoes:not(.respondido) li:hover { background-color: #eef2ff; border-color: #6366f1; }
+        .opcoes.respondido li { cursor: not-allowed; }
+        .opcao-letra { font-weight: bold; margin-right: 15px; }
+        .correct { border-color: #22c55e !important; background-color: #f0fdf4 !important; }
+        .incorrect { border-color: #ef4444 !important; background-color: #fef2f2 !important; }
+        .feedback-area {
+            margin-top: 20px; padding: 15px; font-weight: bold;
+            border-radius: 8px; text-align: center; display: none;
+        }
+        .feedback-correct { background-color: #dcfce7; color: #166534; display: block; }
+        .feedback-incorrect { background-color: #fee2e2; color: #991b1b; display: block; }
+
+/* --- RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS --- */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1em;
+        font-size: 16px;
+    }
+
+    .page-wrapper {
+        flex-direction: column; /* Muda para layout vertical */
+    }
+
+    /* Menu lateral em mobile */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .sidebar h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sidebar ul li {
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .sidebar ul li a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    /* Container principal em mobile */
+    .main-container {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    /* Container do título em mobile */
+    .container-titulo {
+        padding: 0.8em;
+        margin: 0.5em 0;
+        font-size: 18px;
+    }
+
+    /* Container das questões em mobile */
+    .questao-container {
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .questao-titulo {
+        font-size: 1.1em;
+    }
+
+    /* Imagens das questões responsivas */
+    .questao27 {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Caixa de afirmação em mobile */
+    .afirmacao-box {
+        padding: 12px;
+        margin: 1em 0;
+        font-size: 0.95em;
+    }
+
+    /* Opções das questões em mobile */
+    .opcoes li {
+        margin-bottom: 1em;
+        padding: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .opcao-letra {
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+    /* Área de feedback em mobile */
+    .feedback-area {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+}
+
+/* Para telas muito pequenas (smartphones em modo retrato) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0.5em;
+        font-size: 14px;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+
+    .sidebar ul {
+        flex-direction: column;
+    }
+
+    .sidebar ul li {
+        width: 100%;
+    }
+
+    .sidebar ul li a {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    .container-titulo {
+        padding: 0.6em;
+        font-size: 16px;
+        margin: 0.3em 0;
+    }
+
+    .questao-container {
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    .questao-titulo {
+        font-size: 1em;
+    }
+
+    .afirmacao-box {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .opcoes li {
+        padding: 6px;
+        margin-bottom: 0.8em;
+    }
+
+    .opcao-letra {
+        font-size: 0.9em;
+    }
+
+    .feedback-area {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+}
+
+/* Estilos para a seção de filtro por assunto */
+.assunto {
+    background: #f8f9fa;
+    padding: 1.5em;
+    border-radius: 15px;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.assunto h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+}
+
+.assunto-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-assunto {
+    padding: 12px 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.btn-assunto:hover {
+    background-color: #e2e6ea;
+    border-color: #999;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-assunto.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo para botões */
+@media (max-width: 768px) {
+    .assunto-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-assunto {
+        width: 100%;
+        text-align: center;
+    }
+}
