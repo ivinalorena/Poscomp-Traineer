@@ -11,7 +11,6 @@
 </head>
 
 <body>
-    <!--sidebar-->
 <div class="page-wrapper">
         <aside class="sidebar">
             <h3><a href="{{url_for('index')}}">Página Inicial</a></h3>
@@ -21,7 +20,7 @@
                 <li><a href="{{url_for('POSCOMP2023')}}">2023</a></li>
                 <li><a href="{{url_for('POSCOMP2022')}}">2022</a></li>
                 <li><a href="{{url_for('POSCOMP2019')}}">2019</a></li>
-                <li><a href="{{url_for('POSCOMP2020')}}">2020</a></li>
+                <!-- <li><a href="{{url_for('POSCOMP2020')}}">2020</a></li> -->
                 <li><a href="{{url_for('sobre')}}">Sobre</a></li>
             </ul>
         </aside>
@@ -36,13 +35,16 @@
             <button class="btn-assunto" data-subject="tecnologia">Tecnologia de Computação</button>
         </div>
     </div>
-    <div class="content-container">
-        <h1>POSCOMP 2021 - Em desenvolvimento</h1>
-    </div>
+<!--     <div class="content-container">
+        <h1>POSCOMP 2019</h1>
+    </div> -->
 <!--     <div class="image-area">
         <img src="{{url_for('static', filename='Server.gif')}}" alt="Imagem de um servidor" class="image-area">
 
     </div> -->
+    <h1 class="container-titulo" data-subject="matematica">
+        MATEMÁTICA
+    </h1>    
     <div class="questao-container" data-subject="matematica">
     <p class="questao-titulo">
         QUESTÃO 01 – Seja uma matriz quadrada de terceira ordem \( A = \begin{pmatrix} 2 & 3 & 5 \\ 7 & 11 & 13 \\ 17 & 19 & 23 \end{pmatrix} \), calcule o determinante:
@@ -476,7 +478,7 @@
 
         Quais estão corretas?
     </p>
-    <ul class="opcoes" data-correct-answer="D">
+    <ul class="opcoes" data-correct-answer="D" data-subject="fundamentos">
         <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
         <li data-option="B"> <span class="opcao-letra">B)</span> Apenas II. </li>
         <li data-option="C"> <span class="opcao-letra">C)</span> Apenas III. </li>
@@ -486,10 +488,816 @@
     <div class="feedback-area"></div>
     </div>
 
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 27 – Considere o seguinte código em Linguagem C abaixo:
+
+       <pre> int x = 3, y = 1, z = -5, w=-2;
+        int i;
+        for (i=1; i&lt;x; i++) {
+            while (z&lt;0){
+                ++i;
+                z++;
+            }
+            do{
+                x = x +3;
+                w++;
+            }
+            while (w&lt;0);
+        }
+
+        printf("%d %d %d %d", x, y, z, w); </pre>
+        Assinale a alternativa que corresponde à saída impressa na tela.
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 21 1 0 4 </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 3 1 -5 -2 </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 2 0 -4 -1 </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 9 0 -3 -2 </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 1 0 9 2 </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos" style="border: 2px dashed #ff0000;">
+    <p class="questao-titulo" style="color: #ff0000;">
+        QUESTÃO 28 – De acordo com o diagrama de classes UML a seguir, assinale a alternativa correta. (questão anulada)
+
+        <img class="questao27" src="{{url_for('static', filename='quest28POS2019.PNG')}}">
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> A classe "Monitor" tem uma relação de polimorfismo com a classe "SmartTV". </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> A classe "Mouse" tem uma relação de composição com a classe "Computador". </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> A classe "Teclado" é herdada da classe "Computador". </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> O Computador pode ser um computador all in one. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> A SmartTV é o Monitor do Computador. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 29 – Em um sistema de arquivos, é necessário gerenciar blocos de discos que estão livres, para que possam ser alocados a arquivos e/ou diretórios de que necessitem. Analise as técnicas abaixo:
+
+        I. Vetor de bits, no qual cada bloco é representado por um bit.
+        II. Lista encadeada, na qual um ponteiro mantido em memória corresponde ao endereço do primeiro bloco livre, e cada bloco contém um apontador para o próximo bloco livre.
+        III. Lista de contadores, em que cada elemento da lista contém um endereço de bloco e um contador representando o número de blocos contíguos a este que estão livres.
+
+        Quais implementam a gerência de espaço livre em disco?
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas II. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas III. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas I e II. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II e III. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 30 – Considere as afirmações abaixo sobre comandos em linguagens de programação:
+
+        I. Uma declaração de variável associa um nome a um valor que, geralmente, não pode ser alterado durante a execução do programa.
+        II. Expressões aritméticas são expressões cujos resultados são valores numéricos, inteiros ou fracionários.
+        III. Expressões lógicas são aquelas que têm como resultado um dos dois valores, verdadeiro ou falso.
+
+        Quais estão corretas?
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas II. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas III. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II e III. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II e III. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 31 – De acordo com a Teoria de Sistema de Tipos, classifique a função a seguir:
+
+        int soma(int x,int y) {
+            return x+y;
+        }
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Função Somadora. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Função Polimórfica. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Função Monomórfica. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Função Sobrecarregada. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Função Abstrata. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 32 – Sobre grafos, assinale a alternativa correta.
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Um grafo ponderado é um grafo não direcionado em que todos os pares de vértices são adjacentes, isto é, há arestas ligando todos os vértices entre si. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Todo grafo completo tem pesos associados às suas arestas. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Um caminho em um grafo é complexo se todos os vértices do caminho são distintos. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> O grau de um vértices em um grafo não direcionado é o número de arestas que incidem nele. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Se existir um caminho c de x a y, então x é alcançável a partir de c via y. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 33 – Assinale a alternativa que contém uma estrutura de controle que permite que a execução de um trecho de programa dependa do fato de uma condição ser verdadeira, isto é, vinculada à execução de um ou mais comandos ao resultado obtido na avaliação de uma expressão lógica (também denominada condicional).
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Seleção simples. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Seleção dupla. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Comando composto. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Múltipla escolha. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Seleção aninhada. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 34 – Suponha que existem registros lógicos que agregam vários campos (atributos) e que se deseja encontrar registros com base em algum campo de pesquisa, fornecendo algum valor (chave). Considerando estruturas de dados que tornem essa busca eficiente, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas.
+
+        ( ) Uma estrutura baseada em hash é bastante eficiente para pesquisas baseadas em chave, pois permite encontrar o(s) registro(s) correspondente(s) à chave em, no máximo, um acesso à estrutura.
+        ( ) As árvores digitais de pesquisa não tratam as chaves como elementos indivisíveis e, por isso, são adequadas em casos em que há interesse em fazer buscas sobre parte do valor da chave (ex.: prefixo).
+        ( ) Árvores binárias de pesquisa, nas quais os nodos correspondem às chaves, sempre permitem uma busca baseada em chave mais eficiente quando comparada às listas ordenadas pelas chaves.
+
+        A ordem correta de preenchimento dos parênteses, de cima para baixo, é:
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> V – F – V. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> F – V – F. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> F – F – F. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> F – V – V. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> V – V – F. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+        <p class="questao-titulo">
+            QUESTÃO 35 – Uma técnica de compressão de dados converte um bitstream de entrada (mensagem de entrada) em outro bitstream comprimido (mensagem comprimida). Algumas técnicas de compressão dependem de uma tabela de símbolos, definida nesse contexto como uma estrutura de dados que associa caracteres (ou sequência de caracteres) a códigos utilizados para representar a mensagem comprimida. Analise as seguintes assertivas sobre uso de uma tabela de símbolos na técnica de compressão LZW (Lempel, Ziv e Welch) e assinale V, se verdadeiras, ou F, se falsas.
+
+            ( ) A tabela de símbolos associa caracteres individuais com códigos de tamanho variável (bitstreams), cujo tamanho está relacionado à frequência de um caractere. Quanto mais frequente for um caractere na mensagem original, menos bits são usados para representá-lo.
+            ( ) A tabela de símbolos é incluída no início da mensagem comprimida. Para descomprimir a mensagem, o primeiro passo é extrair essa tabela de símbolos, para então usá-la na decodificação da mensagem original.
+            ( ) Uma estrutura de dados adequada para implementação da tabela de símbolos na técnica LWZ é uma árvore trie, devido às operações que essa técnica precisa realizar sobre a tabela de símbolos para efetuar a compressão.
+
+            A ordem correta de preenchimento dos parênteses, de cima para baixo, é:
+        </p>
+        <ul class="opcoes" data-correct-answer="D">
+            <li data-option="A"> <span class="opcao-letra">A)</span> F – V – V. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> V – V – F. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> F – F – F. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> F – F – V. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> V – F – V. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 36 – Um mapa rodoviário é modelado como um grafo em que os vértices representam interseções. As arestas representam segmentos de estrada entre interseções. O peso de cada aresta representa a distância entre interseções. Agora, considere que um motorista deseja obter o caminho mais curto entre duas cidades. Dado um mapa contendo as distâncias entre cada par de interseções adjacentes, como obter o caminho mais curto entre duas cidades?
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Caminho mais curto com destino único. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Caminho gerador mínimo de origem única. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Caminho mais curto com origem única. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Caminho mais curto entre todos os pares de vértices. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Caminho gerador mínimo de origem múltipla. </li>
+    </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+        <p class="questao-titulo">
+            QUESTÃO 37 – Dado um grafo G e um vértice de origem, qual é o algoritmo de busca que descobre todos os vértices a uma distância K do vértice origem, antes de descobrir qualquer vértice a uma distância K+1?
+        </p>
+        <ul class="opcoes" data-correct-answer="B">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Pré-ordem. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Largura. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Pós-ordem. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Profundidade. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Simétrica. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+        <p class="questao-titulo">
+            QUESTÃO 38 – O programa deve ser feito de forma descendente, com a decomposição do problema inicial em módulos, de modo a dividir as ações complexas em uma sequência de ações mais simples. Essa técnica de programação é chamada de programação:
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Abstrata. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Interna. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Declarativa. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Sequencial. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Modular. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+        <p class="questao-titulo">
+            QUESTÃO 39 – Seja M uma máquina de Turing sobre alfabeto Σ. Denotamos por ACEITA(M) o conjunto de palavras aceitas por M. Uma linguagem L ⊆ Σ* é denominada Turing-reconhecível quando existe uma Máquina de Turing M tal que L = ACEITA(M). Usaremos TR(L) para denotar que a linguagem L é Turing-reconhecível. Nesse sentido, analise as seguintes afirmações sobre duas linguagens L1 e L2 sobre o alfabeto Σ:
+
+            I. Se TR(L1) e TR(L2), então TR(L1 ∪ L2).
+            II. Se TR(L1), então TR(Σ* \ L1).
+            III. Se TR(L1) e TR(L2), então TR(L1 ∩ L2).
+
+            Quais estão corretas?
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Apenas II. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Apenas I e III. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II e III. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> I, II e III. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 40 – Considere as seguintes afirmações sobre classes de problemas:
+
+        I. O problema de decisão CAM, descrito a seguir, pertence à classe de complexidade P.
+
+        CAM (caminho em grafo)  
+        Entrada: uma tripla (G,a,b) em que
+
+        - G é um grafo  
+        - a e b são nodos de G  
+
+        Pergunta: Existe caminho em G iniciando em a e terminando em b?
+
+        II. Um problema X pertence à classe de problemas NP-completos quando satisfaz às seguintes condições:
+
+        - X pertence à classe NP, e  
+        - todo problema Y da classe NP pode ser reduzido em tempo polinomial a X.
+
+        III. Se um problema de decisão X pertence à classe P, então o complemento do problema X (problema com as mesmas instâncias que X, porém com as respectivas respostas invertidas) pertence à classe NP.
+
+        Quais estão corretas?
+    </p>
+    <ul class="opcoes" data-correct-answer="E">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas III. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas I e II. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II e III. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II e III. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 41 – Considere L1 e L2 duas linguagens formais sobre o alfabeto \(\Sigma = \{0,1\}\), descritas como segue:
+
+        L1 = { ww | w ∈ Σ^* }
+
+        L2 = { 0°1b | a>0, b>0, b Ímpar }
+
+        Na descrição acima, justaposição significa concatenação de palavras e \(\Sigma^*\) denota o conjunto de todas as palavras sobre o alfabeto \(\Sigma\).
+
+        Seja A1 o autômato finito sobre alfabeto \(\Sigma = \{0,1\}\) descrito pelo seguinte diagrama de transição de estados:
+
+        <img  class="questao27" src="{{url_for('static', filename='quest41POS2019.PNG')}}">
+
+        Denotemos por ACEITA(A1) o conjunto de palavras aceitas por A1.
+
+        Nesse sentido, considere as seguintes afirmações:
+
+        I. L1 é uma linguagem regular.
+        II. L2 é uma linguagem livre de contexto.
+        III. ACEITA(A1) = { w | w ∈ Σ^* e w possui um número ímpar de zeros }.
+
+        Quais estão corretas?
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas II. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas I e III. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II e III. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II e III. </li>
+    </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+
+    <div class="questao-container" data-subject="fundamentos">
+        <p class="questao-titulo">
+            QUESTÃO 42 – Assinale a alternativa que apresenta a expressão simplificada equivalente ao circuito lógico abaixo:
+            <img class="questao27" src="{{url_for('static', filename='quest42POS2019.PNG')}}">
+        </p>
+        <ul class="opcoes" data-correct-answer="A">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \( S = \overline{A} \, B \, C \) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \( S = A \, \overline{B} \, C \) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \( S = A \, B \, \overline{C} \) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \( S = \overline{A} \, B \, \overline{C} \) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \( S = \overline{A} \, \overline{B} \, \overline{C} \) </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+        <p class="questao-titulo">
+            QUESTÃO 43 – Considerando que determinado microcontrolador utiliza os endereços hexadecimais de \( 0020_{16} \) (inclusive) até \( 00FF_{16} \) (inclusive) para acesso a registradores de E/S (Entrada/Saída), a quantidade total de endereços utilizados para acesso aos registradores de E/S é de:
+        </p>
+        <ul class="opcoes" data-correct-answer="D">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 80. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 128. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 160. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 224. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 236. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 44 – Utilizando o seu conhecimento sobre a arquitetura RISC, analise as sentenças abaixo:
+
+        01. Arquitetura RISC suporta alinhamento arbitrário de dados para operações de leitura/escrita.
+        02. Nenhum endereçamento indireto que requer um acesso à memória para obter o endereço de um operando na memória é considerado típico de um RISC clássico.
+        04. Na arquitetura RISC, o número de bits para especificadores registradores inteiros é igual a quatro ou mais. Isso significa que ao menos 16 registradores inteiros podem ser explicitamente referenciados em um momento.
+        08. Um número menor de modos de endereçamento, normalmente menos de cinco. Este parâmetro é difícil de ser determinado na arquitetura RISC.
+        16. Arquitetura RISC suporta operação que combina leitura/escrita com aritmética (por exemplo, adicionar da memória, adicionar para memória).
+        32. Não mais do que um operando endereçado em memória por instrução é específico da arquitetura RISC.
+        64. Na arquitetura RISC, o tamanho é normalmente de 4 bytes.
+
+        O resultado da somatória dos números correspondentes às alternativas corretas é:
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 117. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 110. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 106. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 102. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 95. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+        <p class="questao-titulo">
+            QUESTÃO 45 – Considere o programa abaixo escrito em linguagem C. No instante da execução da linha 5, ter-se-á uma hierarquia composta de quantos processos e threads, respectivamente?
+
+           <pre> 1 main(){
+            2 int i;
+            3 for(i=0;i &lt 3;i++)
+            4 fork();
+            5 while(1);
+            6 }</pre>
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 1 e 0. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 3 e 0. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 4 e 1. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 7 e 7. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 8 e 8. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 46 – Um dispositivo de E/S pode acionar o seu software controlador (*device driver*) para realizar uma tarefa enquanto este esteja realizando o tratamento de outra tarefa do dispositivo. Por exemplo, enquanto o *device driver* da placa de rede processa um pacote que acabou de chegar, ele é interrompido para tratar a chegada de um novo pacote. Essa característica de um *device driver* é denominada código:
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Assíncrono. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Assimétrico. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Elástico. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Reentrante. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Recursivo. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 46 – Um dispositivo de E/S pode acionar o seu software controlador (*device driver*) para realizar uma tarefa enquanto este esteja realizando o tratamento de outra tarefa do dispositivo. Por exemplo, enquanto o *device driver* da placa de rede processa um pacote que acabou de chegar, ele é interrompido para tratar a chegada de um novo pacote. Essa característica de um *device driver* é denominada código:
+    </p>
+    <ul class="opcoes" data-correct-answer="D">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Assíncrono. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Assimétrico. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Elástico. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Reentrante. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Recursivo. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 47 – Seja um circuito lógico com três entradas, A, B, C, e uma saída S. Considerando que o valor da saída S é igual ao valor da entrada A quando as entradas B e C estão no mesmo nível lógico, e que o valor da saída S é igual ao inverso do valor da entrada A quando as entradas B e C estão em níveis lógicos opostos, assinale a alternativa que apresenta a expressão lógica correspondente ao circuito.
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> \( S = A \cdot B \) </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> \( S = A \) </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> \( S = A \) </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> \( S = A \) </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> \( S = A \) </li>
+    </ul>
+    <div class="feedback-area" data-subject="fundamentos"></div>
+    </div>
+
+    <div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 48 – Um cientista da computação precisa avaliar o desempenho de seu computador para calcular o tempo de resposta de um algoritmo. Levando em consideração que todos os setores da trilha 0 são lidos começando do setor 0, então, todos os setores da trilha 1 a partir do setor 0, e assim por diante. O tempo de rotação é de 30 ms, e um seek gasta 20 ms entre cilindros adjacentes e 80 ms para o pior caso. A comutação entre trilhas no mesmo cilindro pode ser feita instantaneamente. Dessa maneira, quanto tempo é gasto para ser lido um disco de 2.400 cilindros, cada um com seis trilhas de 32 setores em segundos?
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 628,12. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 480,06. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 320,12. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 268,06. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 124,12. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="fundamentos">
+    <p class="questao-titulo">
+        QUESTÃO 49 – Em uma máquina de 32 bits, subdividimos o endereço virtual em 4 segmentos da seguinte maneira:
+
+        10-bit   8-bit   6-bit   8-bit
+
+        Uma tabela de páginas de 3 níveis é utilizada, de modo que os primeiros 10 bits são para o primeiro nível e assim por diante. Sendo assim, qual é o tamanho de uma tabela de páginas para um processo que tem 256K de memória iniciando no endereço 0?
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 6480 bytes. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 4608 bytes. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 3240 bytes. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 2408 bytes. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 1020 bytes. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container">
+    <p class="questao-titulo">
+        QUESTÃO 50 – Uma partição de disco rígido é formatada com um sistema de arquivos com base em alocação encadeada, usando tabela de alocação. A formatação da partição considerou um tamanho de bloco (cluster) de 4096 bytes. Um programa executado nesse computador cria um arquivo nessa partição e grava os dados do arquivo de acordo com o trecho de código abaixo. Como resultado, o arquivo criado contém ____ bytes e ocupa ____ bytes na área de dados do sistema de arquivos.
+
+        <pre>...
+
+        05 char dado;
+
+        ...
+
+        25 for(i=0;i&lt;1024;i++)
+        27 write(fd,&amp;dado,1);
+        28 close(fd);</pre>
+
+        Assinale a alternativa que preenche, correta e respectivamente, as lacunas do trecho acima.
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> 1024 – 1024 </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> 1025 – 1025 </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> 1024 – 4096 </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> 1025 – 4096 </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> 4096 – 4096 </li>
+    </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <h1 class="container-titulo" data-subject="tecnologia">
+        TECNOLOGIA DE COMPUTAÇÃO
+    </h1>  
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 51 – Sobre o controle de concorrência baseado na ordenação de *timestamp* (rótulo de tempo), considere \( r_ts(x) \) e \( w_ts(x) \) os *timestamps* da última transação a ler e a gravar o item de dados \( x \), respectivamente. Considere que a transação \( T \), cujo *timestamp* é \( ts(T) \), precisa gravar o item de dados \( x \), ou seja, \( T \) emite a operação *write(x)*. Conforme o algoritmo de ordenação baseada em *timestamp* básica, para que as transações sejam serializáveis em conflito sem que haja o aborto e o reinício de \( T \), o seguinte predicado precisa ser verdadeiro:
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \((r_ts(x) > ts(T))\) or \((w_ts(x) > ts(T))\) </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \((r_ts(x) > ts(T))\) and \((w_ts(x) > ts(T))\) </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \((not \ (r_ts(x) > ts(T))) \) or \((w_ts(x) > ts(T))\) </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \((not \ (r_ts(x) > ts(T))) \) or \((not \ (w_ts(x) > ts(T))) \) </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \((not \ (r_ts(x) > ts(T))) \) and not \(((w_ts(x) > ts(T))) \) </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+    <p class="questao-titulo">
+        QUESTÃO 52 – Dentre os algoritmos para mineração de dados, um exemplo de algoritmo para o particionamento de dados pelo aprendizado não supervisionado, que não usa uma amostra de treinamento pré-classificada, é denominado algoritmo de:
+    </p>
+    <ul class="opcoes" data-correct-answer="B">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Crescimento padrão frequente. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Agrupamento k-means. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Amostragem. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Associação negativa. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Árvore padrão frequente. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 53 – Analise as assertivas abaixo sobre testes de regressão e assinale V, se verdadeiras, ou F, se falsas.
+
+            ( ) Uma suite de testes de regressão bem planejada deve conter dois tipos de casos de teste: aqueles focados nos componentes diretamente relacionados à mudança e aqueles que exercitem funcionalidades já existentes que possam ter sido afetadas pela mudança.
+            ( ) A execução manual de testes de regressão é inviável.
+            ( ) Testes de regressão podem estar relacionados tanto a testes funcionais quanto a testes não funcionais.
+
+            A ordem correta de preenchimento dos parênteses, de cima para baixo, é:
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \( F - V - F \). </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \( V - V - V \). </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \( V - F - V \). </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \( F - F - F \). </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \( F - F - V \). </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 54 – No modelo de referência ISO/OSI, quais são as subcamadas da camada de enlace?
+        </p>
+        <ul class="opcoes" data-correct-answer="B">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Controle de fluxo e controle de congestionamento. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Controle de enlace lógico e controle de acesso ao meio. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Multiplexação e enlace. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Física e Rede. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Transporte e apresentação. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="Tecnologia">
+    <p class="questao-titulo">
+        QUESTÃO 55 – Em relação ao algoritmo ARIES para a recuperação após falha em sistemas de banco de dados, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas.
+
+        ( ) A aplicação da operação REDO é restrita a transações confirmadas.
+        ( ) Uma abordagem _steal/no-force é usada para as regras que governam quando uma página do cache do banco de dados pode ser gravada no disco._
+        ( ) As operações UNDO são registradas no _log, para evitar a repetição das operações UNDO completadas, se ocorrer uma falha durante o processo de recuperação.
+        ( ) A Tabela de Transações contém uma entrada para cada página suja no cache, que inclui o identificador da página e o número de sequência de log da atualização mais antiga dessa página.
+
+        A ordem correta de preenchimento dos parênteses, de cima para baixo, é:
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> F – V – V – F. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> V – F – F – V. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> F – V – F – V. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> V – F – V – F. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> V – F – V – V. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 56 – Analise as seguintes assertivas sobre padrões arquiteturais de software e assinale V, se verdadeiras, ou F, se falsas.
+
+            ( ) Mesmo que um dado padrão arquitetural ofereça uma solução para o problema sendo resolvido, nem sempre ele é adequado. Fatores como contexto e o sistema de forças que afeta a solução fazem também parte do processo de avaliação e da escolha de padrões adequados.
+            ( ) Padrão MVC é uma adaptação do padrão arquitetural Camadas. A Camada Visão lida com a apresentação e a manipulação da interface, a Camada Modelo organiza os objetos específicos da aplicação, e a Camada Controle posiciona-se entre estas duas com as regras do negócio.
+            ( ) O padrão Broker é voltado a problemas de ambientes distribuídos. Sugere uma arquitetura na qual um componente (broker) estabelece uma mediação que permite um desacoplamento entre clientes e servidores.
+
+            A ordem correta de preenchimento dos parênteses, de cima para baixo, é:
+        </p>
+        <ul class="opcoes" data-correct-answer="D">
+            <li data-option="A"> <span class="opcao-letra">A)</span> V – V – V. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> F – F – V. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> V – V – F. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> V – F – V. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> F – V – F. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 57 – Considerando um sistema de coordenadas no espaço, em uma orientação previamente definida, e sabendo que são conhecidos os vetores (ortogonais entre si) correspondentes aos eixos X e Y, qual é o nome da operação que é capaz de produzir o vetor correspondente ao eixo Z desse sistema – isto é, perpendicular aos outros dois?
+        </p>
+        <ul class="opcoes" data-correct-answer="B">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Produto escalar. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Produto vetorial. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Normalização. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Translação. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Projeção. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+    <p class="questao-titulo">
+        QUESTÃO 58 – Como se denomina uma fonte de luz que esteja a uma distância infinita de uma cena, gerando uma iluminação similar à da luz do Sol?
+    </p>
+    <ul class="opcoes" data-correct-answer="C">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Pontual. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Ambiente. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Direcional. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Spot. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Difusa. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 59 – A realização da equalização do histograma de uma imagem resulta em obter:
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> O realce mínimo de detalhes. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Uma transformação de domínio de cores. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> A maior compressibilidade da informação. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> A menor discriminabilidade dos objetos. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> A máxima variância do histograma. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 60 – Uma rede conectada à Internet possui a máscara de sub-rede 255.255.255.0. Qual o número máximo de computadores que a rede suporta?
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 126. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 128. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 254. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 256. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 65.534. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 61 – Sobre visão computacional estéreo, é correto afirmar que:
+        </p>
+        <ul class="opcoes" data-correct-answer="B">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Trata-se de uma subárea que tem como objetivo reconhecer imagens similares. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Capta-se cenas a partir de dois referenciais diferentes para se obter um mapa de disparidade. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Avalia-se o deslocamento entre objetos para se calcular a dispersão. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Tem por objetivo final subdividir as imagens. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Um dos seus subproblemas consiste em desconstruir as imagens em apenas uma. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>   
+    
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 62 – Sobre transparência em sistemas distribuídos, é correto afirmar que:
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Transparência de concorrência trata de ocultar diferenças em representações de dados e do modo como os recursos podem ser acessados pelos usuários. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Transparência de migração é a situação na qual recursos podem ser relocados enquanto estão sendo acessados, sem que o usuário ou a aplicação percebam. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Transparência de replicação oculta o fato de que existem várias cópias do recurso. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Na transparência de relocação, recursos podem ser movimentados sem afetar o modo como podem ser acessados. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Transparência de acesso refere-se ao fato de que os usuários não podem dizer qual é a localização física de um recurso no sistema. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 63 – Considere o esquema de tradução dirigida pela sintaxe apresentado a seguir, no qual as produções da gramática foram numeradas:
+
+           <img class="questao27" src="{{url_for('static', filename='quest63POS2019.PNG')}}">
+
+            Assinale a alternativa correta sobre o esquema.
+        </p>
+        <ul class="opcoes" data-correct-answer="A">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Na produção 4, \( T.val e F.val \) são sintetizados. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Na produção 4, \( T_1.val \) é herdado. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Na produção 5, \( T.val e F.val \) são herdados. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Na produção 2, \( E.val \) é sintetizado e \( T.val \) é herdado. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Na produção 2, \( E_1.val \) é sintetizado e \( T.val \) é herdado. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+    <p class="questao-titulo">
+        QUESTÃO 64 – Uma transação, em sistemas distribuídos, pode ser construída com base em uma quantidade de subtransações. A transação do nível mais alto pode se ramificar e gerar “filhos”, que são executados em paralelo, em máquinas diferentes, para obter ganho de desempenho ou simplificar a programação. Esse é um exemplo de:
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Transação aninhada. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Isolamento. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Transação isolada. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Transação atômica. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> Durabilidade. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+    <p class="questao-titulo">
+        QUESTÃO 65 – Em relação às características do protocolo TCP, analise assertivas abaixo:
+
+        I. Confirma as mensagens que já foram entregues.
+        II. É opcional que ele faça controle de congestionamento.
+        III. Entrega as mensagens em ordem.
+        IV. É half-duplex.
+
+        Quais estão corretas?
+    </p>
+    <ul class="opcoes" data-correct-answer="A">
+        <li data-option="A"> <span class="opcao-letra">A)</span> Apenas I e III. </li>
+        <li data-option="B"> <span class="opcao-letra">B)</span> Apenas II e IV. </li>
+        <li data-option="C"> <span class="opcao-letra">C)</span> Apenas I, II e III. </li>
+        <li data-option="D"> <span class="opcao-letra">D)</span> Apenas II, III e IV. </li>
+        <li data-option="E"> <span class="opcao-letra">E)</span> I, II, III e IV. </li>
+    </ul>
+    <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 66 – O processamento de linguagem natural pode ser entendido como uma subárea da inteligência artificial que estuda a compreensão automática de línguas naturais. Nesse contexto, pode-se afirmar que as seguintes tarefas são utilizadas em problemas de processamento de linguagem natural:
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Stopwords e segmentação semântica. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Quantização e Part-of-Speech. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Extração de entidades e tokenização. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Bigramas e memórias recorrentes. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Espectrogramas e realce. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>   
+
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 67 – Processos, em um sistema distribuído, são divididos em dois grupos, com possível sobreposição. Um servidor é um processo que implementa um serviço específico. Um cliente é um processo que requisita um serviço de um servidor enviando-lhe uma requisição e, na sequência, esperando pela resposta do servidor. Esse é um exemplo de arquitetura:
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Multidividida. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Peer-to-peer estruturada. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Descentralizada. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Peer-to-peer não estruturada. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Centralizada. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 68 – Assinale a alternativa que apresenta a quantidade mínima de registradores necessários para se fazer a alocação no código apresentado abaixo:
+
+            t1 := a – mem[...]
+            t2 := d / mem[...]
+            t3 := t2 + mem[...]
+            t4 := t1 + t3
+        </p>
+        <ul class="opcoes" data-correct-answer="E">
+            <li data-option="A"> <span class="opcao-letra">A)</span> 6 </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> 5 </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> 4 </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> 3 </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> 2 </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 69 – Sobre a regra de Bayes, é correto afirmar que:
+        </p>
+        <ul class="opcoes" data-correct-answer="C">
+            <li data-option="A"> <span class="opcao-letra">A)</span> Trata-se de uma ampliação do conceito de busca probabilística. </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> Refere-se a uma regra lógico-indutiva. </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> Utiliza a probabilidade de um evento a partir do conhecimento a priori. </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> Associa-se à probabilidade de que não deve estar relacionada ao evento. </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> Descreve a precisão de eventos medindo a proporção dos resultados. </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>
+
+    <div class="questao-container" data-subject="tecnologia">
+        <p class="questao-titulo">
+            QUESTÃO 70 – Considerando a gerência de projetos de software, analise as assertivas abaixo e assinale V, se verdadeiras, ou F, se falsas.
+
+            ( ) A gerência efetiva de projetos de software deve abranger três aspectos, a saber, produto, processo e projeto.
+            ( ) A análise de risco de um projeto visa a analisar a viabilidade de produzir software dentro do custo e esforço estimados.
+            ( ) O desenvolvimento de cronogramas de projetos pode ser desenvolvido com o auxílio de modelos como PERT (*Program evaluation and review technique*) ou CPM (*Critical Path Method*).
+
+            A ordem correta de preenchimento dos parênteses, de cima para baixo, é:
+        </p>
+        <ul class="opcoes" data-correct-answer="D">
+            <li data-option="A"> <span class="opcao-letra">A)</span> \( V - V - V \). </li>
+            <li data-option="B"> <span class="opcao-letra">B)</span> \( V - F - V \). </li>
+            <li data-option="C"> <span class="opcao-letra">C)</span> \( F - F - F \). </li>
+            <li data-option="D"> <span class="opcao-letra">D)</span> \( F - F - V \). </li>
+            <li data-option="E"> <span class="opcao-letra">E)</span> \( V - V - F \). </li>
+        </ul>
+        <div class="feedback-area"></div>
+    </div>    
 
 
 </div>
 </body>
+
 
 
 <script>
