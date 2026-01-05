@@ -68,7 +68,7 @@ poscomp-unilab/
 * [x] Interface simples e responsiva.
 * [x] Acesso a provas anteriores do POSCOMP.
 * [x] Filtros de busca por ano.
-* [ ] Filtros de busca por assunto.
+* [x] Filtros de busca por assunto.
 * [ ] Área de login para salvar provas favoritas.
 * [ ] Estatísticas de questões por tema.
 
