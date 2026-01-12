@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-
+from routes.auth import auth_bp
+from routes.user import user_bp
 app = Flask(__name__)
 
 @app.route('/')
@@ -29,9 +30,12 @@ def POSCOMP2020():
 @app.route('/sobre')
 def sobre():
     return render_template('sobre.html')
-#@app.route('/POSCOMP2023')
-#def POSCOMP2023():
-#    return render_template('POSCOMP2023.html')
+
+
+#registrando o blueprint na aplicação - autenticação e as rotas do usuario
+app.register_blueprint(auth_bp, url_prefix='/auth')
+app.register_blueprint(user_bp, url_prefix='/user')
+
 
 if __name__ == '__main__':
     app.run()
